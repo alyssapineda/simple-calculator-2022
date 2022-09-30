@@ -15,8 +15,8 @@
       <div class="screen">0</div>
     
       <div class="buttons">
-        <button id="all-clear">C</button>
-        <button id="last-entity-clear">CE</button>
+        <button data-all-clear id="all-clear">C</button>
+        <button data-delete id="last-entity-clear">CE</button>
         <button data-operation id="modulo">%</button>
         <button data-operation id="divide">÷</button>
         <button data-number id="seven">7</button>
@@ -35,7 +35,8 @@
         <button data-number id="dot">.</button>
         <button data-equal id="equal">=</button>
       </div>
-
+    <div data-prev-op class="previous-operand"></div>
+    <div data-current-op class="current-operand"></div>
     </div>
   </section>
   
