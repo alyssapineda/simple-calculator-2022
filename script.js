@@ -1,29 +1,46 @@
-// const screen = document.querySelector('.screen');
-// const numberBtn = document.querySelectorAll('[data-number]');
-// const operationBtn = document.querySelectorAll('[data-operation]');
-// const equalBtn = document.querySelector('[data-equal]');
-// const allClear = document.querySelector('[data-all-clear]');
-// const delBtn = document.querySelector('[data-delete]');
+let screenel = document.querySelector('#result');
+let calculation = "";
+let result = "";
+let lastOperator = "";
+let newOperator = "";
 
-// const previousOp = document.querySelector('[data-prev-op]');
-// const currentOp = document.querySelector('[data-current-op]');
 
-const screenel = document.querySelector('[data-screen]')
+function display(value){
 
-function display(number){
-  document.querySelector('#result').value += number;
-  screenel.textContent = number;
-  return number;
+	if(value == '%')
+	{
+		lastOperator = "%";
+	}else if(value == '*'){
+		lastOperator = "*";
+	}else if (value == '-'){
+		lastOperator = "-";
+	}else if (value == '/'){
+		lastOperator = "/";
+	}else if (value == '+'){
+		lastOperator = "+";
+	}
+
+	console.log("The Value is " + value);
+	console.log("The lastOperator is " + lastOperator);
+
+	if(lastOperator == "" || (newOperator != lastOperator) || (value != lastOperator))
+	{
+		result = result.concat(calculation, value);
+    	screenel.textContent = result;
+    	newOperator = lastOperator;
+    	console.log("New Operator" + newOperator);
+    	return;
+    }
 }
   
 function calc(){
-  let x = document.querySelector('#result').value;
-  let y = eval(x);
-  document.querySelector('#result').value = y;
-  screenel.textContent = y;
-  return y
+  let y = eval(result);
+  screenel.textContent = String(y);
 }
 
 function clear(){
-  document.querySelector('#result').value = ''
+  screenel.textContent = "";
+  calculation = "";
+  result = "";
+  return;
 }
