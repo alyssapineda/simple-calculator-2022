@@ -33,7 +33,7 @@ html {
   box-shadow:9px 9px 14px #c9c9c3;
 }
 
-.screen {
+#result {
   height:80px;
   width:100%;
   text-align:right;
@@ -68,16 +68,12 @@ button {
   border:none;
   transition:400ms;
   float:left;
+  cursor:pointer;
 }
 
 button:hover {
   background-color:#d4d4d4;
   color:#fff;
 }
-
-.operations {
-  float:right;
-}
-
 
 

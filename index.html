@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- inspired by https://www.section.io/engineering-education/building-a-calculator-a-javascript-project-for-beginners/ -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,31 +13,31 @@
 <body>
   <section class="calculator-section">
     <div class="container">
-      <div class="screen">0</div>
+      <div id="result">0</div>
     
       <div class="buttons">
-        <button data-all-clear id="all-clear">C</button>
-        <button data-delete id="last-entity-clear">CE</button>
-        <button data-operation id="modulo">%</button>
-        <button data-operation id="divide">÷</button>
-        <button data-number id="seven">7</button>
-        <button data-number id="eight">8</button>
-        <button data-number id="nine">9</button>
-        <button data-operation id="mult">x</button>
-        <button data-number id="four">4</button>
-        <button data-number id="five">5</button>
-        <button data-number id="six">6</button>
-        <button data-operation id="plus">+</button>
-        <button data-number id="one">1</button>
-        <button data-number id="two">2</button>
-        <button data-number id="three">3</button>
-        <button data-operation id="minus">-</button>
-        <button data-number id="zero">0</button>
-        <button data-number id="dot">.</button>
-        <button data-equal id="equal">=</button>
+        <button onclick="clear()" id="all-clear">C</button>
+        <button id="last-entity-clear">CE</button>
+        <button data-screen value="%" onclick="display()" id="modulo">%</button>
+        <button data-screen value="/" onclick="display()" id="divide">÷</button>
+        <button data-screen value="7" onclick="display()" id="seven">7</button>
+        <button data-screen value="8" onclick="display()" id="eight">8</button>
+        <button data-screen  value="9" onclick="display()" id="nine">9</button>
+        <button data-screen value="*" onclick="display()" id="mult">x</button>
+        <button data-screen value="4" onclick="display()" id="four">4</button>
+        <button data-screen value="5" onclick="display()" id="five">5</button>
+        <button data-screen value="6" onclick="display()" id="six">6</button>
+        <button data-screen value="+" onclick="display()" id="plus">+</button>
+        <button data-screen value="1" onclick="display()" id="one">1</button>
+        <button data-screen value="2" onclick="display()" id="two">2</button>
+        <button data-screen value="3" onclick="display()" id="three">3</button>
+        <button data-screen value="-" onclick="display()" id="minus">-</button>
+        <button data-screen value="0" onclick="display()" id="zero">0</button>
+        <button data-screen value="." onclick="display()" id="dot">.</button>
+        <button onclick="calc()" id="equal">=</button>
       </div>
-    <div data-prev-op class="previous-operand"></div>
-    <div data-current-op class="current-operand"></div>
+      <div data-prev-op class="previous-operand"></div>
+      <div data-current-op class="current-operand"></div>
     </div>
   </section>
   
