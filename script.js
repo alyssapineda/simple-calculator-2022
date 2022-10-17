@@ -1,5 +1,6 @@
 let equal_pressed = 0;
 let button_input = document.querySelectorAll(".input-button");
+var symbol_input = document.querySelectorAll("[data-symbol]")
 
 //refer input, equal, clear and erase 
 let input = document.querySelector("#input");
@@ -23,6 +24,7 @@ button_input.forEach((button_class) => {
   });
 });
 
+
 //solve user's input when equal button is clicked
 equal.addEventListener("click", () => {
   equal_pressed = 1;
@@ -41,6 +43,31 @@ equal.addEventListener("click", () => {
       alert("Please click on valid input button!");
   }
 });
+
+//does not allow double clicking of operators and decimal
+// Array.from(symbols).forEach(function(numberElement) {
+//   var symbolValue = numberElement.textContent;
+//   numberElement.addEventListener('click', function() {
+//     if (lastClicked !== 'symbol') {
+//       lastClicked = 'symbol';
+//       input.value += symbolValue;
+//     }
+//   });
+// });
+
+// button_input.forEach((button_class) => {
+//   button_class.addEventListener("click", () => {
+//     if (equal_pressed == 1) {
+//       input.value = "";
+//       equal_pressed = 0;
+//     }
+//     //display value of each button
+//     input.value += button_class.value;
+//   });
+// });
+
+
+
 
 // AC button deletes entire input on screen
 clear.addEventListener("click", () => {
