@@ -4,7 +4,7 @@ let button_input = document.querySelectorAll(".input-button");
 //refer input, equal, clear and erase 
 let input = document.querySelector("#input");
 let clear = document.querySelector("#clear");
-let erase = document.querySelector("#erase");
+let erase = document.querySelector("#delete");
 let equal = document.querySelector("#equal");
 
 window.onload = () => {
@@ -30,9 +30,9 @@ equal.addEventListener("click", () => {
   try {
     //evaluate user's input
     let result = eval(inp_val);
-    //true for natural numbers
+    //true for integers
     //false for decimals
-    if(Number.isInteger(result)) {
+    if (Number.isInteger(result)) {
       input.value = result;
     }else {
       input.value = result.toFixed(2);

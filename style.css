@@ -17,10 +17,11 @@ html {
 
 h1 {
   position:absolute;
-  top:10%;
-  left:41%;
+  transform:translate(-50%,-50%);
+  top:15%;
+  left:50%;
   color:rgb(81, 81, 81);
-  font-size:40px;
+  font-size:35px;
 }
 
 .calculator-section {
@@ -85,7 +86,7 @@ h1 {
   box-shadow:5px 5px 5px #e1e1da;
   cursor:pointer;
   border-radius:8px;
-  transition:300ms;
+  transition:200ms;
 }
 
 .buttons input[type="button"]:hover {
